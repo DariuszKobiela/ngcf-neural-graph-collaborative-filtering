@@ -119,7 +119,7 @@ def main(args):
             break
 
         if ret["recall"][0] == cur_best_pre_0 and args.save_flag == 1:
-            torch.save(model.state_dict(), args.weights_path + args.model_name + args.dataset)
+            torch.save(model.state_dict(), args.weights_path + args.dataset + '_' + args.model_name)
             print(
                 "save the weights in path: ",
                 args.weights_path + args.model_name,
