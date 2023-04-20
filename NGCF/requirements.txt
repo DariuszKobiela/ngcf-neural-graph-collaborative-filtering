@@ -1,4 +1,0 @@
-dgl-cu110
-numpy==1.21.6
-torch==1.13.1
-scikit-learn==1.0.2

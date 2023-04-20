@@ -1,0 +1,73 @@
++ ./smore/cli/bpr -train ./data/nyc_train.txt -save ./emb/nyc_bpr.txt -dimensions 64 -threads 12 -sample_times 10
+Connections Preview:
+	# of connection:	158683
+Connections Loading:
+	Progress:		100.00 %
+	# of vertex:		19061
+Build the Alias Method:
+	Reconstructing Graph ...
+	Building Alias Tables ...
+	Finished.
+Model Setting:
+	dimension:		64
+Model:
+	[BPR]
+Learning Parameters:
+	sample_times:		10
+	alpha:			0.025
+	workers:		12
+Start Training:
+	Alpha: 0.000125	Progress: 100.00 %
+Save Model:
+	Save to <./emb/nyc_bpr.txt>
++ python3 predict.py --emb_file ./emb/nyc_bpr.txt --dataset nyc --K 1
+Loading the embeddings...
+Evaluating...
+==================
+File: ./emb/nyc_bpr.txt
+Evaluated users: 1083
+precision@1: 0.003693444136657433
+recall@1: 0.00012998585897422776
+NDCG@1: 0.003693444136657433
+==================
++ python3 predict.py --emb_file ./emb/nyc_bpr.txt --dataset nyc --K 5
+Loading the embeddings...
+Evaluating...
+==================
+File: ./emb/nyc_bpr.txt
+Evaluated users: 1083
+precision@5: 0.00554016620498615
+recall@5: 0.0006857242924761426
+NDCG@5: 0.005279309220373023
+==================
++ python3 predict.py --emb_file ./emb/nyc_bpr.txt --dataset nyc --K 10
+Loading the embeddings...
+Evaluating...
+==================
+File: ./emb/nyc_bpr.txt
+Evaluated users: 1083
+precision@10: 0.005817174515235457
+recall@10: 0.0014797611927866217
+NDCG@10: 0.005617167917985736
+==================
++ python3 predict.py --emb_file ./emb/nyc_bpr.txt --dataset nyc --K 20
+Loading the embeddings...
+Evaluating...
+==================
+File: ./emb/nyc_bpr.txt
+Evaluated users: 1083
+precision@20: 0.005493998153277932
+recall@20: 0.0029223718953017386
+NDCG@20: 0.005595715708526241
+==================
++ python3 predict.py --emb_file ./emb/nyc_bpr.txt --dataset nyc --K 40
+Loading the embeddings...
+Evaluating...
+==================
+File: ./emb/nyc_bpr.txt
+Evaluated users: 1083
+precision@40: 0.005032317636195753
+recall@40: 0.005272525566750278
+NDCG@40: 0.00592539293934977
+==================
+

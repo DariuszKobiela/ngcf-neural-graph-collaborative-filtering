@@ -1,0 +1,73 @@
+bash movielens_bpr_run.sh 
++ ./smore/cli/bpr -train ./data/movielens_train.txt -save ./emb/movielens_bpr.txt -dimensions 64 -threads 12 -sample_times 10
+Connections Preview:
+	# of connection:	697377
+Connections Loading:
+	Progress:		100.00 %
+	# of vertex:		9526
+Build the Alias Method:
+	Reconstructing Graph ...
+	Building Alias Tables ...
+	Finished.
+Model Setting:
+	dimension:		64
+Model:
+	[BPR]
+Learning Parameters:
+	sample_times:		10
+	alpha:			0.025
+	workers:		12
+Start Training:
+	Alpha: 0.000125	Progress: 100.00 %
+Save Model:
+	Save to <./emb/movielens_bpr.txt>
++ python3 predict.py --emb_file ./emb/movielens_bpr.txt --dataset movielens --K 1
+Loading the embeddings...
+Evaluating...
+==================
+File: ./emb/movielens_bpr.txt
+Evaluated users: 6040
+precision@1: 0.025827814569536423
+recall@1: 0.001522882704850124
+NDCG@1: 0.025827814569536423
+==================
++ python3 predict.py --emb_file ./emb/movielens_bpr.txt --dataset movielens --K 5
+Loading the embeddings...
+Evaluating...
+==================
+File: ./emb/movielens_bpr.txt
+Evaluated users: 6040
+precision@5: 0.023211920529801325
+recall@5: 0.005904049146916558
+NDCG@5: 0.02394450109917441
+==================
++ python3 predict.py --emb_file ./emb/movielens_bpr.txt --dataset movielens --K 10
+Loading the embeddings...
+Evaluating...
+==================
+File: ./emb/movielens_bpr.txt
+Evaluated users: 6040
+precision@10: 0.021341059602649006
+recall@10: 0.01046349073954708
+NDCG@10: 0.022909184944691352
+==================
++ python3 predict.py --emb_file ./emb/movielens_bpr.txt --dataset movielens --K 20
+Loading the embeddings...
+Evaluating...
+==================
+File: ./emb/movielens_bpr.txt
+Evaluated users: 6040
+precision@20: 0.01951158940397351
+recall@20: 0.01773351136646162
+NDCG@20: 0.02408017468342201
+==================
++ python3 predict.py --emb_file ./emb/movielens_bpr.txt --dataset movielens --K 40
+Loading the embeddings...
+Evaluating...
+==================
+File: ./emb/movielens_bpr.txt
+Evaluated users: 6040
+precision@40: 0.01759519867549669
+recall@40: 0.030508176885296206
+NDCG@40: 0.028304673710645652
+==================

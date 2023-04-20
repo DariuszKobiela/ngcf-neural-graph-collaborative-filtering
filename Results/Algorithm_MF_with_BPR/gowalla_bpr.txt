@@ -1,0 +1,72 @@
++ ./smore/cli/bpr -train ./data/gowalla_train.txt -save ./emb/gowalla_bpr.txt -dimensions 64 -threads 12 -sample_times 10
+Connections Preview:
+	# of connection:	810128
+Connections Loading:
+	Progress:		100.00 %
+	# of vertex:		70839
+Build the Alias Method:
+	Reconstructing Graph ...
+	Building Alias Tables ...
+	Finished.
+Model Setting:
+	dimension:		64
+Model:
+	[BPR]
+Learning Parameters:
+	sample_times:		10
+	alpha:			0.025
+	workers:		12
+Start Training:
+	Alpha: 0.000125	Progress: 100.00 %
+Save Model:
+	Save to <./emb/gowalla_bpr.txt>
++ python3 predict.py --emb_file ./emb/gowalla_bpr.txt --dataset gowalla --K 1
+Loading the embeddings...
+Evaluating...
+==================
+File: ./emb/gowalla_bpr.txt
+Evaluated users: 29858
+precision@1: 0.14103422868243018
+recall@1: 0.023192569449915424
+NDCG@1: 0.14103422868243018
+==================
++ python3 predict.py --emb_file ./emb/gowalla_bpr.txt --dataset gowalla --K 5
+Loading the embeddings...
+Evaluating...
+==================
+File: ./emb/gowalla_bpr.txt
+Evaluated users: 29858
+precision@5: 0.07016544979569965
+recall@5: 0.05676811578159834
+NDCG@5: 0.09191819295279498
+==================
++ python3 predict.py --emb_file ./emb/gowalla_bpr.txt --dataset gowalla --K 10
+Loading the embeddings...
+Evaluating...
+==================
+File: ./emb/gowalla_bpr.txt
+Evaluated users: 29858
+precision@10: 0.05065978967110992
+recall@10: 0.08064397672237825
+NDCG@10: 0.09149569920726307
+==================
++ python3 predict.py --emb_file ./emb/gowalla_bpr.txt --dataset gowalla --K 20
+Loading the embeddings...
+Evaluating...
+==================
+File: ./emb/gowalla_bpr.txt
+Evaluated users: 29858
+precision@20: 0.03563199142608346
+recall@20: 0.11094075261741831
+NDCG@20: 0.09898521581903429
+==================
++ python3 predict.py --emb_file ./emb/gowalla_bpr.txt --dataset gowalla --K 40
+Loading the embeddings...
+Evaluating...
+==================
+File: ./emb/gowalla_bpr.txt
+Evaluated users: 29858
+precision@40: 0.024589724696898654
+recall@40: 0.1513377250440213
+NDCG@40: 0.11132459716239895
+==================

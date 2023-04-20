@@ -1,0 +1,7 @@
+Dataset,Gowalla,Yelp2018,Amazon-Book,NYC2014,TKY2014
+NGCF-3 (Wang et al.),0.1327,0.0477,0.0261,-,-
+NGCF-3 (Kobiela et al.),0.2625,-,0.0682,0.0212,0.0174
+HOP-Rec (Wang et al.),0.1214,0.0428,0.0232,-,-
+HOP-Rec (Kobiela et al.),0.0885,-, 0.0080,0.0052,0.0073
+MF with BPR (Wang et al.), 0.1109,0.0354, 0.0196,-,-
+MF with BPR (Kobiela et al.), 0.0990,-,0.0078,0.0056,0.0071

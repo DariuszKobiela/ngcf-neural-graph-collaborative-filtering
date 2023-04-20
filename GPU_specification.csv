@@ -1,0 +1,14 @@
+FP64,9.7 TFLOPS
+FP64 Tensor Core,19.5 TFLOPS
+FP32,19.5 TFLOPS
+Tensor Float 32 (TF32),156  FLOPS
+BFLOAT16 Tensor Core,312 FLOPS
+FP16 Tensor Core,312 FLOPS
+INT8 Tensor Core,624 FLOPS
+GPU Memory,40GB HBM2
+GPU Memory Bandwidth,"1,555 GB/s"
+Max Thermal Design Power (TDP),400 W
+Multi-Instance GPU,Up to 7 MIGs @ 5GB
+Form Factor,SXM
+Interconnect,"NVLink: 600GB/s; PCle Gen4: 64GB/s"
+Server Options,"NVIDIA HGX A100 Partner and NVIDIA-Certified Systems with 4, 8 or 16 GPUs; NVIDIA DGX A100 with 8 GPUs"
