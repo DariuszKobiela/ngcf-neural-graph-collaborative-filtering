@@ -1,7 +1,7 @@
 # ngcf-neural-graph-collaborative-filtering
 This repository contains replication package for paper written by Kobiela, D., Groth, J., Sieczczyński, M., Wolniak, R., Pastuszak, K. [[1]](#1) which continues the work performed by Wang et al. [[2]](#2). 
 The goal of the study was to verify the robustness of the NGCF (Neural Graph Collaborative Filtering) technique by assessing its ability to generalize across different datasets. 
-To achieve this, we first replicated the experiments conducted by Wang et al.to ensure that their replication package is functional. 
+To achieve this, we first replicated the experiments conducted by Wang et al. to ensure that their replication package is functional. 
 We received sligthly better results for ndcg@20 and somewhat poorer results for recall@20, which may be due to the randomness. 
 Afterward, we applied their framework to four additional datasets (NYC2014, TOKYO2014, Yelp2022, and MovieLens1M) and compared NGCF with HOP-Rec and MF-BPR as in the original study. 
 Our results confirm that NGCF model outperforms other models in terms of ndcg@20. 
